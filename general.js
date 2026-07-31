@@ -24,9 +24,6 @@ public_users.post("/register", (req, res) => {
   return res.status(404).json({message: "Unable to register user. Please provide username and password."});
 });
 
-// Khai báo thư viện (đảm bảo em đã có dòng này ở đầu file)
-const axios = require('axios');
-
 // Task 10: Get all books using Async/Await and Axios
 public_users.get('/', async function (req, res) {
   try {
@@ -87,7 +84,6 @@ public_users.get('/title/:title', async function (req, res) {
   } catch (error) {
     return res.status(500).json({message: "Error retrieving books by title"});
   }
-});
 });
 
 module.exports.public_users = public_users;
